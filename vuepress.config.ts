@@ -39,7 +39,7 @@ export default defineUserConfig({
         // 仓库所有者的用户名
         user: "Lykisun",
         // 仓库所有者的仓库名
-        repository: "mathstorage",
+        repository: "Mathstorage",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
         authorizationToken: process.env.githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
@@ -65,7 +65,7 @@ export default defineUserConfig({
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
     },
     {
-      mountPath: "/huggingface测试",
+      mountPath: "/模拟卷",
       analysis: huggingFaceDatasetsAnalysis({
         userName: "Open-Orca",
         datasetsName: "OpenOrca",
@@ -76,22 +76,7 @@ export default defineUserConfig({
       }),
     },
     {
-      mountPath: "/gitee测试/发行版",
-      analysis: giteeReleasesFilesAnalysis({
-        user: "jja8",
-        repository: "flist-test",
-        direction: "desc"
-      })
-    },
-    {
-      mountPath: "/gitee测试/仓库",
-      analysis: giteeReposAnalysis({
-        user: "jja8",
-        repository: "flist-test"
-      }),
-    },
-    {
-      mountPath: "/ProgrammingVTuberLogos",
+      mountPath: "/高考真题",
       analysis: githubReposAnalysis({
         user: "Aikoyori",
         repository: "ProgrammingVTuberLogos",
